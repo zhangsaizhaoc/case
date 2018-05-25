@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--该内容表示页面中用到的一些图标-->
+	<link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>视差加载</title>
+
+
+	 <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <!--页面加载时元素产生一些动画效果插件，插件WOW.js 依赖于 animate.css-->
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+   
+    <script type="text/javascript">
+	$(function(){
+		$(window).scroll(function(){
+			//简介背景图缓动,其它背景也可以这样设置，根据自己的审美与需求自己设定其它
+			$("#mpage").css("background-position","50% "+$(document).scrollTop()*-0.1+"px");
+		})
+	})
+ 
+
+</script>
+</head>
+<body>
+<div id="wrap">
+
+    <!--简介-->
+    <div id="mpage"  style="background-image: url(image/1439888965539.jpg); background-position: 50% 0px;">
+        <div class="bgmask"></div>
+        <div class="content">
+            <div class="header wow fadeInUp" data-wow-delay=".2s">
+                  <p class="title">简介</p>
+                  <p class="subtitle">About Us</p>
+            </div>
+            <p class="description wow fadeInUp" data-wow-delay=".3s">末那，執著於頓悟的魂魄！末那工作室是中國大陸地區第壹家以原創高端GK模型及雕像開發生產的專業工作室。
+            </p>
+            <a href="javascript:;" class="more wow fadeInUp" data-wow-delay=".5s">MORE
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <div class="fimg wow fadeInUp" data-wow-delay=".3s" style=" background-image:url(image/1441783756197.png);">
+            </div>
+
+         </div>
+    </div>
+    
+    
+    <!--日记-->
+    <div id="mnews" >
+		<div class="content">
+            <div class="header wow slideInUp" data-wow-delay=".1s" >
+              <p class="title">日记</p>
+              <p class="subtitle">News</p>
+            </div>
+            <div id="newslist">
+              <div class="newstitem">
+                <div class="newscontent">
+                	<a class="newsinfo fl" href="javascript:;">
+                      <div class="newsdate fl wow fadeInLeft" data-wow-delay=".1s" >
+                        <p class="md">02-02</p>
+                        <p class="year">2016</p>
+                      </div>
+                      <div class="newsbody fl wow fadeInRight" data-wow-delay=".1s" >
+                        <p class="title ellipsis">末那丨2015年度工作及作品总结</p>
+                        <p class="description">2015年，末那工作室的第五个年头。这一年，我们继续投身于热爱的创作工作，结识了新朋友，尝试了更多有意思的事情。同时，也经历了各种挑战。</p>
+                      </div>
+                    </a>
+                    <i class="fa fa-angle-right fr"></i>
+                 </div>
+              </div>
+              <div class="newstitem ">
+                <div class="newscontent"><a class="newsinfo fl" href="javascript:;">
+                  <div class="newsdate fl wow fadeInLeft" data-wow-delay=".1s" >
+                    <p class="md">01-28</p>
+                    <p class="year">2016</p>
+                  </div>
+                  <div class="newsbody fl wow fadeInRight" data-wow-delay=".1s" >
+                    <p class="title ellipsis">重整河山待后生---末那合作《斗战神》系列衍生品的坚持</p>
+                    <p class="description">如果执着与情怀是根基，那么游戏项目、市场品牌、版权等众多部门对我们的大力支持及绝对信任，背后优秀强大的美术概念团队就是阳光与土壤。众多才华四溢的人，在同一个时代的某个节点相遇，是偶然也是必然。</p>
+                  </div>
+                  </a><i class="fa fa-angle-right fr"></i></div>
+              </div>
+              <div class="newstitem ">
+                <div class="newscontent"><a class="newsinfo fl" href="javascript:;">
+                  <div class="newsdate fl wow fadeInLeft" data-wow-delay=".1s" >
+                    <p class="md">12-25</p>
+                    <p class="year">2015</p>
+                  </div>
+                  <div class="newsbody fl wow fadeInRight" data-wow-delay=".1s" >
+                    <p class="title ellipsis">末那众生，寻龙摸金</p>
+                    <p class="description">《寻龙诀》对于我们来说是一次非常难得的体验，我们从概念设计，道具制作到后期衍生品的开发都有幸参与。</p>
+                  </div>
+                  </a><i class="fa fa-angle-right fr"></i></div>
+              </div>
+            </div>
+
+            <a href="javascript:;" class="more wow fadeInUp" data-wow-delay=".5s">MORE<strong class="line2"></strong><i class="fa fa-angle-right"></i></a>
+
+        </div>
+	</div>
+        
+        
+</div>
+</body>
+</html>

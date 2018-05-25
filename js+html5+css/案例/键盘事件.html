@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>获取键盘事件</title>
+<script type="text/javascript" language="javascript" >
+    function init() {
+        document.onkeydown = showKeyDown ;
+        document.onkeyup = showKeyUp ;
+        document.onkeypress = showKeyPress ;
+    };
+    function showKeyDown(evt) {
+        evt = (evt) ? evt : window.event;
+        document.getElementById("pressKeyCode").innerHTML = 0;
+        document.getElementById("upKeyCode").innerHTML = 0;
+        document.getElementById("pressCharCode").innerHTML = 0;
+        document.getElementById("upCharCode").innerHTML = 0;
+        document.getElementById("downKeyCode").innerHTML = evt.keyCode;
+        if (evt.charCode) {
+            document.getElementById("downCharCode").innerHTML = evt.charCode
+        }
+    };
+	function showKeyUp(evt) {
+        evt = (evt) ? evt : window.event;
+	    document.getElementById("upKeyCode").innerHTML = evt.keyCode;
+        if (evt.charCode) {
+            document.getElementById("upCharCode").innerHTML = evt.charCode
+        }
+        return false
+    };
+    function showKeyPress(evt) {
+        evt = (evt) ? evt : window.event;
+        document.getElementById("pressKeyCode").innerHTML = evt.keyCode;
+        if (evt.charCode) {
+            document.getElementById("pressCharCode").innerHTML = evt.charCode
+        }
+        return false
+    };
+	</script>
+</head>
+
+<body onkeypress="init();">
+  <table>
+     <tr>
+	    <td>presskeycode</td>
+	    <td>upkeycode</td>
+	    <td>downkeycode</td>
+	    <td>downcharcode</td>
+	    <td>presscharcode</td>
+	    <td>upcharcode</td>
+	 </tr>
+     <tr>
+	    <td id="pressKeyCode">0</td>
+	    <td id="upKeyCode">0</td>
+	    <td id="downKeyCode">0</td>
+		<td id="downCharCode">0</td>
+		<td id="pressCharCode">0</td>
+		<td id="upCharCode">0</td>
+  </table>
+  <input type="button" value="refresh" id="no1"/>
+  <p>基本所有键都有downkeycode</p>
+  <p>TMD 数字和字母还有部分键没有presskeycode</p>
+  <P>presskeycode 不能return false！</P>
+  <p>IE和360中第一次的按键不能是光标键，不然就没反应</p>
+  <P>兼容性不好</P>
+  <script type="text/javascript">
+    var oInput = document.getElementById("no1");
+	oInput.onclick = function() {window.location.reload();};
+  </script>
+</body>
+</html>

@@ -1,20 +1,20 @@
-﻿Vue.js
+﻿##Vue.js
 
-前端轻量级的一个mvvm框架，用于构建数据驱动的 web 界面的库
+#前端轻量级的一个mvvm框架，用于构建数据驱动的 web 界面的库
 
 angularjs  react.js  backbone knockout.js
 
-知识储备
+##知识储备
 ES6 babel  webpack 
 
 
 
-svn  版本控制
+##svn  版本控制
 
 账号： 名字英文小写全拼
 密码： 123
 
-确定nodejs 6.0+
+##确定nodejs 6.0+
 
 在线测试 浏览器对es6的支持情况
 npm install -g es-checker
@@ -22,8 +22,8 @@ es-checker
 http://ruanyf.github.io/es-checker/
 
 
-配置babel
-1、项目目录创建 .babelrc
+##配置babel
+#1、项目目录创建 .babelrc
  {
     "presets": [
       "latest",
@@ -32,34 +32,34 @@ http://ruanyf.github.io/es-checker/
     ],
     "plugins": []
   }
-2、安装插件
+#2、安装插件
 npm install -g babel-preset-latest
 npm install -g babel-preset-react
 npm install -g babel-preset-stage-2   0-3
 
-3、安装执行转码 cli 
+#3、安装执行转码 cli 
 npm install -g babel-cli
 
-4、执行转码
+#4、执行转码
 babel x.js -o _x.js
 
 
 
-ES5 只有两种声明变量的方法：var命令和function命令。
+#ES5 只有两种声明变量的方法：var命令和function命令。
 
-ES6 除了添加let和const命令，import命令和class命令。所以，ES6 一共有6种声明变量的方法。
+#ES6 除了添加let和const命令，import命令和class命令。所以，ES6 一共有6种声明变量的方法。
 
 
-申明变量，存在作用域的限制，子级作用域的值，父级作用域得不到
+#申明变量，存在作用域的限制，子级作用域的值，父级作用域得不到
 if(true){
 	let user = "1509B"
 }
 
-常量不能修改值，而且同一作用域中，变量常量调用参数，必须在声明之后调用，否则报错
+#常量不能修改值，而且同一作用域中，变量常量调用参数，必须在声明之后调用，否则报错
 
 
 
-ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构
+#ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构
 
 方法一：
 let [a,b,c] = [1,2,3];
@@ -78,7 +78,7 @@ let a;
 
 
 
-操作字符串三个方法
+#操作字符串三个方法
 
 //判断字符串是否包含value，返回布尔值
 str.includes("");
@@ -95,7 +95,7 @@ str.endsWith("");
 //console.log(str.endsWith("s",3));
 
 
-重复字符串
+#重复字符串
 
 //var str = "6";
 //var talk = "i love u";
@@ -104,7 +104,7 @@ str.endsWith("");
 //console.log(talk.repeat(10));
 
 
-填充字符串
+#填充字符串
 第一个参数拼接字符串的长度，第二个字符串，拼接的文字
 //var str = "aa";
 //前加
@@ -115,7 +115,7 @@ str.endsWith("");
 //console.log(str.padEnd(4,'52'));
 
 
-模板语言
+#模板语言
 通过` `来拼接html 字符串
 
 ${}表达式来传参，同时可以做一些运算操作
